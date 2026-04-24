@@ -1,0 +1,13 @@
+# Configuración del editor / sistema — no subir a GitHub
+.vscode/
+.claude/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales de Office / Windows
+~$*
+*.tmp
+
+# Logs
+*.log
