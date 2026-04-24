@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- ================================================================
+  ARCHIVO: arriendo-trajes.html
+  PÁGINA:  Arriendo de Trajes – El Baúl de la Abuela
+  ESTILOS: styles.css
+
+  ESTRUCTURA:
+  ┌──────────────────────────────────────────────────────┐
+  │ <header>  Navbar                                     │
+  ├──────────────────────────────────────────────────────┤
+  │ <section.arriendo-banner>                            │
+  │   Título grande + 2 líneas de info                   │
+  ├──────────────────────────────────────────────────────┤
+  │ <section.arriendo-tipos>                             │
+  │   "Tipos" + 3 tarjetas (Mujeres / Hombres / Niños)  │
+  │   Desktop: solo título en la tarjeta                 │
+  │   Móvil:   título izq + placeholder imagen der       │
+  └──────────────────────────────────────────────────────┘
+
+  IMÁGENES POR CATEGORÍA (móvil):
+    Reemplaza .arriendo-card__img-ph dentro de cada tarjeta por:
+      <img src="imagenes/traje-mujeres.png" alt="Trajes mujer"
+           class="arriendo-card__img" />
+    Mismo para hombres y niños.
+
+  IMÁGENES PARA DESKTOP (interior de la tarjeta):
+    Añade un <img class="arriendo-card__img-desktop"
+                   src="imagenes/traje-mujeres.png" alt="…" />
+    después del .arriendo-card__titulo en cada tarjeta.
+================================================================ -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Arriendo de trajes a la antigua – El Baúl de la Abuela." />
+  <title>Arriendo de Trajes – El Baúl de la Abuela</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
+      <a href="index.html" class="navbar__logo" aria-label="Inicio – El Baúl de la Abuela">
+        <div class="navbar__logo-img" aria-hidden="true">
+          <img src="imagenes/logos/completo.png" alt="El Baúl de la Abuela" />
+        </div>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a class="navbar__nav-link" href="arriendo-trajes.html" aria-current="page">Arriendo de trajes</a></li>
+        <li><a class="navbar__nav-link" href="sesiones.html">Sesiones</a></li>
+        <li><a class="navbar__nav-link" href="vamos-a-tu-evento.html">Vamos a tu evento</a></li>
+        <li><a class="navbar__nav-link" href="contactanos.html">Contáctanos</a></li>
+      </ul>
+      <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__mobile-menu" id="mobileMenu" role="list" aria-hidden="true">
+        <li><a class="navbar__mobile-link" href="arriendo-trajes.html" aria-current="page">Arriendo de trajes</a></li>
+        <li><a class="navbar__mobile-link" href="sesiones.html">Sesiones</a></li>
+        <li><a class="navbar__mobile-link" href="vamos-a-tu-evento.html">Vamos a tu evento</a></li>
+        <li><a class="navbar__mobile-link" href="contactanos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- ============================================================
+      BANNER DE ATENCIÓN
+      ────────────────────────────────────────────────────────────
+      Fondo rojo degradado. Título grande + 2 líneas de info.
+    ============================================================ -->
+    <section class="arriendo-banner" aria-label="Información de arriendo">
+      <div class="arriendo-banner__inner">
+
+        <h1 class="arriendo-banner__titulo">
+          Atención, todos los trajes tienen el valor de $15.000 por día
+        </h1>
+
+        <p class="arriendo-banner__info">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0;">
+            <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Se deja garantía de $45.000 traje de mujer y $55.000 traje hombre
+        </p>
+        <p class="arriendo-banner__info">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:inline-block;vertical-align:middle;margin-right:6px;flex-shrink:0;">
+            <path d="M4 10l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Se paga por transferencia bancaria para poder devolverla al entregar el traje de vuelta.
+        </p>
+
+      </div>
+    </section>
+
+
+    <!-- ============================================================
+      TIPOS DE TRAJE
+      ────────────────────────────────────────────────────────────
+      Fondo crema. 3 tarjetas-botón: Mujeres / Hombres / Niños.
+
+      Desktop: tarjetas en fila, solo el título (sin imagen).
+      Móvil:   tarjetas apiladas, título izq + placeholder der.
+
+      Destino de cada enlace → edita el href cuando tengas la página.
+    ============================================================ -->
+    <section class="arriendo-tipos" aria-label="Tipos de traje disponibles">
+      <div class="arriendo-tipos__inner">
+
+        <h2 class="arriendo-tipos__subtitulo">Tipos</h2>
+
+        <div class="arriendo-tipos__grid">
+
+          <!-- Tarjeta Mujeres (desktop) -->
+          <a href="mujeres-trajes.html" class="arriendo-card" aria-label="Ver trajes de mujer">
+            <span class="arriendo-card__titulo">Mujeres</span>
+            <div class="arriendo-card__img-ph" aria-hidden="true">
+              <img class="arriendo-card__img" src="imagenes/M.png" alt="Trajes mujer" />
+            </div>
+          </a>
+
+          <!-- Tarjeta Hombres (desktop) -->
+          <a href="hombres-trajes.html" class="arriendo-card" aria-label="Ver trajes de hombre">
+            <span class="arriendo-card__titulo">Hombres</span>
+            <div class="arriendo-card__img-ph" aria-hidden="true">
+              <img class="arriendo-card__img" src="imagenes/H.png" alt="Trajes hombre" />
+            </div>
+          </a>
+
+          <!-- Tarjeta Niños (desktop) -->
+          <a href="ninos-trajes.html" class="arriendo-card" aria-label="Ver trajes de niños">
+            <span class="arriendo-card__titulo">Niños</span>
+            <div class="arriendo-card__img-ph" aria-hidden="true">
+              <img class="arriendo-card__img" src="imagenes/Ninos/N.png" alt="Trajes niño" />
+            </div>
+          </a>
+
+        </div><!-- /.arriendo-tipos__grid (desktop) -->
+
+
+        <!-- ============================================================
+          GRID MÓVIL — 3 filas × 2 columnas de placeholders
+          Izquierda → página de categoría  |  Derecha → página nueva (TBD)
+          Solo visible en móvil (display:none en desktop vía CSS).
+          REEMPLAZAR cada .arriendo-mob-ph por <img src="..." />
+          ACTUALIZAR los href de la columna derecha cuando tengas las páginas.
+        ============================================================ -->
+        <div class="arriendo-mob-grid">
+
+          <!-- Fila Mujeres -->
+          <a href="mujeres-trajes.html" class="arriendo-mob-item" aria-label="Ver trajes de mujer">
+            <div class="arriendo-mob-ph" aria-hidden="true"><img src="imagenes/M.png" alt="Trajes mujer" /></div>
+          </a>
+          <a href="#" class="arriendo-mob-item" aria-label="Ver más de mujer">
+            <div class="arriendo-mob-ph" aria-hidden="true">
+              <img src="imagenes/movil.destacadaM.jpeg" alt="mujeres">
+            </div>
+          </a>
+
+          <!-- Fila Hombres -->
+          <a href="hombres-trajes.html" class="arriendo-mob-item" aria-label="Ver trajes de hombre">
+            <div class="arriendo-mob-ph" aria-hidden="true"><img src="imagenes/H.png" alt="Trajes hombre" /></div>
+          </a>
+          <a href="#" class="arriendo-mob-item" aria-label="Ver más de hombre">
+            <div class="arriendo-mob-ph" aria-hidden="true">
+              <img src="imagenes/movil.destacadaH.jpeg" alt="hombres">
+            </div>
+          </a>
+
+          <!-- Fila Niños -->
+          <a href="ninos-trajes.html" class="arriendo-mob-item" aria-label="Ver trajes de niños">
+            <div class="arriendo-mob-ph" aria-hidden="true"><img src="imagenes/Ninos/N.png" alt="Trajes niño" /></div>
+          </a>
+          <a href="#" class="arriendo-mob-item" aria-label="Ver más de niños">
+            <div class="arriendo-mob-ph" aria-hidden="true">
+              <img src="imagenes/movil.destacadaN.jpeg" alt="niños">
+            </div>
+          </a>
+
+        </div><!-- /.arriendo-mob-grid -->
+
+      </div><!-- /.arriendo-tipos__inner -->
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER SIMPLE -->
+  <footer class="site-footer-simple" role="contentinfo" aria-label="El Baúl de la Abuela">
+    <div class="site-footer-simple__logo">
+      <img src="imagenes/logo.nombre.png" alt="El Baúl de la Abuela" />
+    </div>
+  </footer>
+
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/56993325276" class="whatsapp-fab" target="_blank" rel="noopener noreferrer"
+    aria-label="Contáctanos por WhatsApp">
+    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="30" cy="30" r="30" fill="#25D366" />
+      <path
+        d="M30 12C20.06 12 12 20.06 12 30c0 3.18.84 6.17 2.3 8.76L12 48l9.48-2.28A17.93 17.93 0 0030 48c9.94 0 18-8.06 18-18S39.94 12 30 12z"
+        fill="white" />
+      <path
+        d="M39.5 34.73c-.5-.25-2.96-1.46-3.42-1.63-.46-.17-.8-.25-1.13.25-.33.5-1.29 1.63-1.58 1.96-.29.33-.58.37-1.08.12-.5-.25-2.1-.77-4-2.46-1.48-1.32-2.48-2.94-2.77-3.44-.29-.5-.03-.77.22-1.02.22-.22.5-.58.75-.87.25-.29.33-.5.5-.83.17-.33.08-.62-.04-.87-.12-.25-1.13-2.72-1.54-3.73-.4-.98-.82-.85-1.13-.86-.29-.01-.62-.01-.96-.01-.33 0-.87.12-1.33.62-.46.5-1.75 1.71-1.75 4.17s1.79 4.84 2.04 5.17c.25.33 3.52 5.37 8.52 7.54 1.19.51 2.12.82 2.84 1.05 1.19.38 2.28.33 3.14.2.96-.14 2.96-1.21 3.38-2.38.42-1.17.42-2.17.29-2.38-.12-.21-.46-.33-.96-.58z"
+        fill="#25D366" />
+    </svg>
+  </a>
+
+
+  <script>
+    'use strict';
+    (function () {
+      var btn = document.getElementById('hamburgerBtn');
+      var menu = document.getElementById('mobileMenu');
+      function open() { menu.classList.add('is-open'); btn.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); menu.setAttribute('aria-hidden', 'false'); btn.setAttribute('aria-label', 'Cerrar menú'); }
+      function close() { menu.classList.remove('is-open'); btn.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-hidden', 'true'); btn.setAttribute('aria-label', 'Abrir menú'); }
+      btn.addEventListener('click', function () { menu.classList.contains('is-open') ? close() : open(); });
+      document.addEventListener('click', function (e) { if (!btn.contains(e.target) && !menu.contains(e.target)) close(); });
+      menu.querySelectorAll('.navbar__mobile-link').forEach(function (l) { l.addEventListener('click', close); });
+    }());
+  </script>
+
+</body>
+
+</html>
