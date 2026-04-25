@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- ================================================================
+  ARCHIVO: ninos-trajes.html
+  PÁGINA:  Trajes de Niños – El Baúl de la Abuela
+  ESTILOS: styles.css (sección 39 "GALERÍA DE ESTILO")
+
+  ESTRUCTURA:
+  ┌──────────────────────────────────────────────────────┐
+  │ <header>  Navbar                                     │
+  ├──────────────────────────────────────────────────────┤
+  │ <section.galeria-trajes>                             │
+  │   Flecha volver → arriendo-trajes.html               │
+  │   H1 "Niños"                                         │
+  │                                                      │
+  │   MÓVIL:                                             │
+  │     .galeria-hero → 1 placeholder ancho (16:9)       │
+  │     .galeria-grid → 2 columnas, 10 items             │
+  │                     texto chico bajo cada imagen     │
+  │                                                      │
+  │   DESKTOP:                                           │
+  │     .galeria-grid → 5 columnas × 2 filas = 10 items  │
+  │                     texto chico bajo cada imagen     │
+  └──────────────────────────────────────────────────────┘
+
+  AGREGAR IMÁGENES:
+    Hero (móvil):
+      Reemplaza <div class="galeria-hero__ph"> por:
+      <img class="galeria-hero__img"
+           src="imagenes/ninos-hero.jpg" alt="Niños" />
+
+    Grid items:
+      Reemplaza cada <div class="galeria-item__ph"> por:
+      <img class="galeria-item__img"
+           src="imagenes/ninos-XX.jpg" alt="Traje X" />
+    Actualiza el href de cada .galeria-item y .galeria-hero
+    cuando tengas las páginas de detalle individuales.
+================================================================ -->
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trajes de niños a la antigua – El Baúl de la Abuela." />
+  <title>Niños – El Baúl de la Abuela</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar" role="navigation" aria-label="Navegación principal">
+      <a href="index.html" class="navbar__logo" aria-label="Inicio – El Baúl de la Abuela">
+        <div class="navbar__logo-img" aria-hidden="true">
+          <img src="imagenes/logos/completo.png" alt="El Baúl de la Abuela" />
+        </div>
+      </a>
+      <ul class="navbar__nav" role="list">
+        <li><a class="navbar__nav-link" href="arriendo-trajes.html" aria-current="page">Arriendo de trajes</a></li>
+        <li><a class="navbar__nav-link" href="sesiones.html">Sesiones</a></li>
+        <li><a class="navbar__nav-link" href="vamos-a-tu-evento.html">Vamos a tu evento</a></li>
+        <li><a class="navbar__nav-link" href="contactanos.html">Contáctanos</a></li>
+      </ul>
+      <button class="navbar__hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="navbar__mobile-menu" id="mobileMenu" role="list" aria-hidden="true">
+        <li><a class="navbar__mobile-link" href="arriendo-trajes.html" aria-current="page">Arriendo de trajes</a></li>
+        <li><a class="navbar__mobile-link" href="sesiones.html">Sesiones</a></li>
+        <li><a class="navbar__mobile-link" href="vamos-a-tu-evento.html">Vamos a tu evento</a></li>
+        <li><a class="navbar__mobile-link" href="contactanos.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <section class="galeria-trajes" aria-label="Galería trajes de niños">
+      <div class="galeria-trajes__inner">
+
+        <!-- Flecha volver → arriendo-trajes.html -->
+        <a href="arriendo-trajes.html" class="trajes-back-btn" aria-label="Volver a Arriendo de trajes">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true">
+            <path d="M13 4L7 10L13 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </a>
+
+        <h1 class="galeria-trajes__titulo">Niños</h1>
+
+        <!-- ============================================================
+          HERO — solo visible en móvil
+          Placeholder ancho (16:9) que ocupa todo el ancho de pantalla.
+          REEMPLAZAR: elimina .galeria-hero__ph y pon:
+            <img class="galeria-hero__img"
+                 src="imagenes/ninos-hero.jpg"
+                 alt="Traje niños destacado" />
+        ============================================================ -->
+
+        <!-- ============================================================
+          GRID DE FOTOS
+          Desktop: 5 columnas × 2 filas (10 items).
+          Móvil:   2 columnas × 5 filas (10 items).
+          Texto chico bajo cada placeholder.
+
+          REEMPLAZAR cada .galeria-item__ph por:
+            <img class="galeria-item__img"
+                 src="imagenes/ninos-XX.jpg"
+                 alt="Descripción" />
+          ACTUALIZAR cada href="#" con el link correspondiente.
+        ============================================================ -->
+        <div class="galeria-grid">
+
+          <!-- Fila 1 — Trajes (items 1–5) -->
+          <a href="#" class="galeria-item" aria-label="Traje 1">
+            <div class="galeria-item__ph" aria-hidden="true">
+              <img class="galeria-item__img" src="imagenes/Ninos/N-01.png" alt="Traje niños 1" />
+            </div>
+            <span class="galeria-item__texto">niño 01</span>
+          </a>
+          <a href="#" class="galeria-item" aria-label="Traje 2">
+            <div class="galeria-item__ph" aria-hidden="true">
+              <img class="galeria-item__img" src="imagenes/Ninos/N-02.png" alt="Traje niños 2" />
+            </div>
+            <span class="galeria-item__texto">niño 02</span>
+          </a>
+          <a href="#" class="galeria-item" aria-label="Traje 3">
+            <div class="galeria-item__ph" aria-hidden="true">
+              <img class="galeria-item__img" src="imagenes/Ninos/N-03.png" alt="Traje niños 3" />
+            </div>
+            <span class="galeria-item__texto">niño 03</span>
+          </a>
+          <a href="#" class="galeria-item" aria-label="Traje 4">
+            <div class="galeria-item__ph" aria-hidden="true">
+              <img class="galeria-item__img" src="imagenes/Ninos/N-04.png" alt="Traje niños 4" />
+            </div>
+            <span class="galeria-item__texto">niño 04</span>
+          </a>
+          <a href="#" class="galeria-item" aria-label="Traje 5">
+            <div class="galeria-item__ph" aria-hidden="true">
+              <img class="galeria-item__img" src="imagenes/Ninos/N-05.png" alt="Traje niños 5" />
+            </div>
+            <span class="galeria-item__texto">niño 05</span>
+          </a>
+
+          <!-- Fila 2 — Accesorios (items 6–10) -->
+          <a href="#" class="galeria-item" aria-label="Traje 6">
+            <div class="galeria-item__ph" aria-hidden="true">
+              <img class="galeria-item__img" src="imagenes/Ninos/N-06.png" alt="Traje niños 6" />
+            </div>
+            <span class="galeria-item__texto">niño 06</span>
+          </a>
+          <a href="#" class="galeria-item" aria-label="Traje 7">
+            <div class="galeria-item__ph" aria-hidden="true">
+              <img class="galeria-item__img" src="imagenes/Ninos/N-07.png" alt="Traje niños 7" />
+            </div>
+            <span class="galeria-item__texto">niño 07</span>
+          </a>
+
+
+        </div><!-- /.galeria-grid -->
+
+      </div><!-- /.galeria-trajes__inner -->
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER SIMPLE -->
+  <footer class="site-footer-simple" role="contentinfo" aria-label="El Baúl de la Abuela">
+    <div class="site-footer-simple__logo">
+      <img src="imagenes/logo.nombre.png" alt="El Baúl de la Abuela" />
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/56993325276" class="whatsapp-fab" target="_blank" rel="noopener noreferrer"
+    aria-label="Contáctanos por WhatsApp">
+    <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="30" cy="30" r="30" fill="#25D366" />
+      <path
+        d="M30 12C20.06 12 12 20.06 12 30c0 3.18.84 6.17 2.3 8.76L12 48l9.48-2.28A17.93 17.93 0 0030 48c9.94 0 18-8.06 18-18S39.94 12 30 12z"
+        fill="white" />
+      <path
+        d="M39.5 34.73c-.5-.25-2.96-1.46-3.42-1.63-.46-.17-.8-.25-1.13.25-.33.5-1.29 1.63-1.58 1.96-.29.33-.58.37-1.08.12-.5-.25-2.1-.77-4-2.46-1.48-1.32-2.48-2.94-2.77-3.44-.29-.5-.03-.77.22-1.02.22-.22.5-.58.75-.87.25-.29.33-.5.5-.83.17-.33.08-.62-.04-.87-.12-.25-1.13-2.72-1.54-3.73-.4-.98-.82-.85-1.13-.86-.29-.01-.62-.01-.96-.01-.33 0-.87.12-1.33.62-.46.5-1.75 1.71-1.75 4.17s1.79 4.84 2.04 5.17c.25.33 3.52 5.37 8.52 7.54 1.19.51 2.12.82 2.84 1.05 1.19.38 2.28.33 3.14.2.96-.14 2.96-1.21 3.38-2.38.42-1.17.42-2.17.29-2.38-.12-.21-.46-.33-.96-.58z"
+        fill="#25D366" />
+    </svg>
+  </a>
+
+  <script>
+    'use strict';
+    (function () {
+      var btn = document.getElementById('hamburgerBtn');
+      var menu = document.getElementById('mobileMenu');
+      function open() { menu.classList.add('is-open'); btn.classList.add('is-open'); btn.setAttribute('aria-expanded', 'true'); menu.setAttribute('aria-hidden', 'false'); btn.setAttribute('aria-label', 'Cerrar menú'); }
+      function close() { menu.classList.remove('is-open'); btn.classList.remove('is-open'); btn.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-hidden', 'true'); btn.setAttribute('aria-label', 'Abrir menú'); }
+      btn.addEventListener('click', function () { menu.classList.contains('is-open') ? close() : open(); });
+      document.addEventListener('click', function (e) { if (!btn.contains(e.target) && !menu.contains(e.target)) close(); });
+      menu.querySelectorAll('.navbar__mobile-link').forEach(function (l) { l.addEventListener('click', close); });
+    }());
+  </script>
+
+</body>
+
+</html>
