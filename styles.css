@@ -564,9 +564,18 @@ ul {
   overflow: hidden;
 }
 
+/*
+  La imagen siempre se renderiza al tamaño del slide activo (589×336).
+  El contenedor la recorta con overflow:hidden en los estados prev/next.
+  Así el navegador nunca necesita escalarla hacia arriba y mantiene calidad.
+*/
 .carousel__img {
-  width: 100%;
-  height: 100%;
+  position: absolute;
+  width: 589px;
+  height: 336px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   object-fit: cover;
   display: block;
 }
@@ -967,6 +976,11 @@ ul {
     transform: translateX(280px);
   }
 
+  .carousel__img {
+    width: 340px;
+    height: 320px;
+  }
+
   /* Tarjetas tablet */
   .categories__grid {
     gap: var(--space-md);
@@ -1040,6 +1054,11 @@ ul {
     width: 180px;
     height: 180px;
     transform: translateX(260px);
+  }
+
+  .carousel__img {
+    width: 300px;
+    height: 300px;
   }
 
   .carousel__slide[data-state="hidden-left"] {
